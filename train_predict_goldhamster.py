@@ -230,7 +230,7 @@ def print_predictions(predictions,train_dev_test_dir,test_file,out_file,skipped_
 		writer.close()
 
 def train_cross_validation(docs_dir,train_dev_test_dir,name):
-	print(split_dir)
+	print(train_dev_test_dir)
 	range_values = range(0,10)
 	for split in range_values:
 		print("*** ",split," ***")
@@ -247,9 +247,9 @@ if __name__ == '__main__':
 	# folders
 	train_dev_test_dir = [TRAIN_DEV_TEST_DIR]
 	docs_dir = [DOCS_DIR]
-	train_one_experiment(docs_dir,train_dev_test_dir,best_split,"goldhamster")
+	#train_one_experiment(docs_dir,train_dev_test_dir,best_split,"goldhamster")
 	#
-	#train_cross_validation(docs_dir,train_dev_test_dir,"goldhamster",None)
+	train_cross_validation(docs_dir,train_dev_test_dir,"goldhamster")
 	
 
 
